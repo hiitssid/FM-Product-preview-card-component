@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid lime;
+}
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+
+  --fraunces: "Fraunces", serif;
+  --Montserrat: "Montserrat", sans-serif;
+}
+body {
+  background-color: var(--cream);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  width: 340px;
+  height: auto;
+  background-color: var(--White);
+  border-radius: 10px;
+}
+.image-grid {
+  width: 340px;
+  height: 240px;
+  background: url(./images/image-product-mobile.jpg);
+  border-radius: 10px 10px 0 0;
+  background-size: cover;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 25px;
+  justify-content: space-between;
+}
+.desc-grid p:nth-child(1) {
+  font-family: var(--Montserrat);
+  letter-spacing: 4px;
+  color: var(--dark-grayish-blue);
+}
+.desc-grid h1 {
+  font-family: var(--fraunces);
+  font-weight: 700;
+  font-size: 32px;
+  padding-top: 10px;
+  color: var(--very-dark-blue);
+}
+.desc-grid p:nth-child(3) {
+  font-family: var(--Montserrat);
+  font-weight: 400;
+  font-size: 13px;
+  padding-top: 10px;
+  color: var(--dark-grayish-blue);
+  line-height: 20px;
+}
+.price-grid {
+  padding-top: 55px;
+}
+.price-grid div {
+  display: flex;
+  align-items: center;
+}
+.price-grid div h1 {
+  font-family: var(--fraunces);
+  color: var(--dark-cyan);
+  margin-right: 25px;
+}
+.price-grid div span {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+  font-family: var(--Montserrat);
+}
+button {
+  margin-top: 18px;
+  min-height: 50px;
+  width: 100%;
+  padding: 0;
+  background-color: var(--dark-cyan);
+  color: var(--White);
+  font-family: var(--Montserrat);
+  border: none;
+  border-radius: 10px;
+}
+.button-icon {
+  margin-right: 10px;
+}
+@media only screen and (min-width: 375px) {
+  .card {
+    display: flex;
+    width: 600px;
+  }
+  .image-grid {
+    background: url(./images/image-product-desktop.jpg);
+    width: 300px;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    background-size: cover;
+  }
+  .description {
+    width: 300px;
+  }
+  button:hover {
+    cursor: pointer;
+    background: var(--very-dark-blue);
+  }
+}
