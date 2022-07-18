@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid lime;
+/*   outline: 1px solid lime; */
 }
 :root {
   --dark-cyan: hsl(158, 36%, 37%);
